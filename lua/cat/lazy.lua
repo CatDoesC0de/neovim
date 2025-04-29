@@ -20,7 +20,13 @@ require("lazy").setup({
   spec = {
 	{ "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = ...},
 	{ "neovim/nvim-lspconfig" },
-    { "m4xshen/autoclose.nvim" }
+    { "m4xshen/autoclose.nvim" },
+    { 
+      'nvim-telescope/telescope.nvim', tag = '0.1.8',
+      dependencies = { 'nvim-lua/plenary.nvim' }
+    },
+    {  "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" }
+
   },
   checker = { enabled = true },
 })
